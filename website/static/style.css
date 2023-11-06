@@ -1,0 +1,12 @@
+body{
+    font-family: roboto;
+}
+.holder{
+    background-image: url('image1.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: .4;
+    position: fixed;
+    
+}

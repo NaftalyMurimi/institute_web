@@ -1,0 +1,15 @@
+DAY 1
+create the virtual environment first using 
+>>>python3 -m venv institute_venv
+activate your environment
+institute_venv\Scripts\activate
+pip install django
+create the institute main project using 
+>>> django-admin startproject institute_web
+
+create the main app
+>>> py manage.py startapp website
+register the website in installed apps settings
+create views urls and template pages
+The homepage will contain the navbars
+it also includes all the bootstrap links
