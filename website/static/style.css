@@ -5,8 +5,14 @@ body{
     background-image: url('image1.PNG');
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 1;
     
-    opacity: .4;
-    position: fixed;
+
     
+}
+.orange{
+    color: orange;
+}
+section.img{
+    height: 60px;
 }
