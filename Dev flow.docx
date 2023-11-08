@@ -29,3 +29,14 @@ register the users in the admin panel in the settings.py
 >>>>AUTH_USER_MODEL = 'users.CustomUser'
 create the admin USER 
 >>>> py manage.py createsuperuser
+
+
+
+Day 3
+Good progress so far, create the courses display cards and popup modals,
+the advert modal is working perfectly, next i create a model that will store our advert images
+however there changes are needed to include the cost charged per course.
+
+Next i will create login interface to the admin person who will make the changes and updates
+regarding the different courses
+in the application i will use google forms 

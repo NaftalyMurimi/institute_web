@@ -27,7 +27,7 @@
  <!-- cards courses-->
  <section id="courses">
   <div class="container  mt-2">
-    <div class="text-center display-5">Our Course</div>
+    <div class="text-center display-5 sticky-top bg-light">Our Course</div>
       <div class="row  justify-content-center align-items-center">
       {% for course in courses %}
         <div class="card g-2 ms-2 mb-2" style="width: 18rem;">
@@ -56,16 +56,19 @@
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">{{ course.course_title }}</h1>
         <br>
-        <img src="{{ course.course_img}}" class="img-fluid" alt="..." style="height: 150px; width: auto;">
+        
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
-        {{ course.course_description }}
+        <img src="{{ course.course_img}}" class="img-fluid" alt="..." style="height: auto; width: auto;">
+        <p class="card-text">{{ course.course_description }}</p>
         <p class="card-text text-fw">Requirements: {{ course.course_requirements }}</p>
         <p class="card-text muted">Duration: {{ course.course_duration }}</p>
       </div>
       
       <div class="modal-footer">
+        <button class=" btn btn-success"> Apply Now</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
     </div>
