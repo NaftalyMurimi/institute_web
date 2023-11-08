@@ -25,113 +25,57 @@
    
   </div>
  <!-- cards courses-->
-<section id="courses">
+ <section id="courses">
   <div class="container  mt-2">
     <div class="text-center display-5">Our Course</div>
       <div class="row  justify-content-center align-items-center">
-        <div class="card g-2 ms-2" style="width: 18rem;">
-          <img src="{% static 'Arise.png'%}" class="img-fluid" alt="...">
+      {% for course in courses %}
+        <div class="card g-2 ms-2 mb-2" style="width: 18rem;">
+          <img src="{{ course.course_img}}" class="img-fluid" alt="..." style="height: 150px; width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{ course.course_title }}</h5>
+            <p class="card-text">Requirements: {{ course.course_requirements }}</p>
+            <p class="card-text muted">Duration: {{ course.course_duration }}</p>
+               <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal{{ course.pk }}">
+                      learn More
+                  </button>
           </div>
         </div>
-        <div class="card g-2 ms-2" style="width: 18rem;">
-          <img src="{% static 'image1.png'%}" class="img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card g-2 ms-2" style="width: 18rem;">
-          <img src="{% static 'Arise.png'%}" class="img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card g-2 ms-2" style="width: 18rem;">
-          <img src="{% static 'image1.png'%}" class="img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card g-2 ms-2" style="width: 18rem;">
-          <img src="{% static 'Arise.png'%}" class="img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card g-2 ms-2" style="width: 18rem;">
-          <img src="{% static 'image1.png'%}" class="img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+       
+      {% endfor %}
     </div>
 </div>
+
+
+<!-- Modal -->
+{% for course in courses%}
+<div class="modal fade" id="courseModal{{ course.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ course.course_title }}</h1>
+        <br>
+        <img src="{{ course.course_img}}" class="img-fluid" alt="..." style="height: 150px; width: auto;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ course.course_description }}
+        <p class="card-text text-fw">Requirements: {{ course.course_requirements }}</p>
+        <p class="card-text muted">Duration: {{ course.course_duration }}</p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+{% endfor%}
+
+
 </section>
 <!-- this is the footer section -->
-<footer >
-  <div class="container-xxl bg-dark">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-2">
-        <img src="{% static 'Arise.png'%}" class="img-fluid" alt="...">
-        </div>
-  
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-4 offset-1">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of whats new and exciting from us.</p>
-            <div class="d-flex w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
-  
-      <div class="justify-content-between border-top text-center align-items-center">
-        <p class="text-info">&copy; ATTI, Inc. All rights reserved.</p>
-        <p class="muted text-secondary">Designed & developed by <b>Cyanet Labs</b></p>
-       
-      </div>
-    </footer>
-  </div>
-</footer>
 
 
 

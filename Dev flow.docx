@@ -13,3 +13,19 @@ register the website in installed apps settings
 create views urls and template pages
 The homepage will contain the navbars
 it also includes all the bootstrap links
+
+
+Day 2
+I have created cards to hold the courses and modals to display the description of the 
+courses
+create course model to store ours course image. title, requirements, decription duration
+in the static have a folder that will store the course images
+
+create a custom user (ADMIN) who will help to update data on the website
+>>> py manage.py rstartapp users
+create custome user model to include email field that is not provided by default abstract user in django
+register the models in the admin.py file
+register the users in the admin panel in the settings.py
+>>>>AUTH_USER_MODEL = 'users.CustomUser'
+create the admin USER 
+>>>> py manage.py createsuperuser
