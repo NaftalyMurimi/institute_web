@@ -1,48 +1,57 @@
 
 {% load static%}
 <section id="courses">
-    <div class="container  mt-2">
-      <div class="text-center display-5">Our Course</div>
-        <div class="row  justify-content-center align-items-center">
-        {% for course in courses %}
-          <div class="card g-2 ms-2" style="width: 18rem;">
-            <img src="{{ course.course_img.url }}" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ course.course_title }}</h5>
-              <p class="card-text">{{ course.course_description }}</p>
-                 <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        learn More
-                    </button>
-            </div>
+  <div class="container  mt-2">
+    <div class="text-center display-5 sticky-top bg-light">Our Course</div>
+      <div class="row  justify-content-center align-items-center">
+      {% for course in courses %}
+        <div class="card g-2 ms-2 mb-2" style="width: 18rem;">
+         
+          <img src="{{course.course_img.url }}" class="img-fluid" alt="..." style="height: 150px; width: auto;">
+          <div class="card-body">
+            <h5 class="card-title">{{ course.course_title }}</h5>
+            <p class="card-text">Requirements: {{ course.course_requirements }}</p>
+            <p class="card-text muted">Duration: {{ course.course_duration }}</p>
+               <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal{{ course.pk }}">
+                      learn More
+                  </button>
           </div>
-        {% endfor %}
-      </div>
-  </div>
-
-
-  <!-- Modal -->
-
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa eveniet iste sit adipisci
-           vitae enim consequuntur modi ex excepturi eligendi iure deleniti expedita ipsum aut molestiae est
-            quisquam repellendus architecto, commodi placeat. Neque, adipisci placeat. Necessitatibus inventore
-             exercitationem blanditiis dicta voluptas quidem totam voluptatem modi excepturi iste recusandae 
-             temporibus, iusto odio voluptatibus, eos possimus reprehenderit. Dolorum aspernatur cum placeat
-              facilis vitae quos nisi voluptatibus, recusandae dolore nesciunt harum quia.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+       
+      {% endfor %}
     </div>
-</div> -->
+</div>
+
+
+<!-- Modal -->
+{% for course in courses%}
+<div class="modal fade" id="courseModal{{ course.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ course.course_title }}</h1>
+        <br>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="{{ course.course_img}}" class="img-fluid" alt="..." style="height: auto; width: auto;">
+        <p class="card-text">{{ course.course_description }}</p>
+        <p class="card-text "><b>Requirements: </b>{{ course.course_requirements }}</p>
+        <p class="card-text "> <b>Cost:</b> {{ course.course_cost }}</p>
+        <p class="card-text muted"> <b>Duration:</b> {{ course.course_duration }}</p>
+      </div>
+      
+      <div class="modal-footer">
+        <button class=" btn btn-success"> Apply Now</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+{% endfor%}
+
+
 </section>
