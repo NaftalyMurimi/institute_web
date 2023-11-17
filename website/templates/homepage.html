@@ -2,6 +2,28 @@
 {% extends 'main.html'%}
 {% load static%}
 {% block content%}
+<!-- display advert -->
+
+
+  <!-- Modal -->
+ 
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   
+    <div class="modal-dialog modalh">
+      <div class="modal-content">
+        <div class="modal-header">
+        
+          <h5 class="modal-title text-center" id="staticBackdropLabel">ArchiCAD Classes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img src="{% static 'adverts/ArchiCAD.png'%}" class="img-fluid">
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
   <div class="holder container-xxl">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-5 text-center text-md-start">

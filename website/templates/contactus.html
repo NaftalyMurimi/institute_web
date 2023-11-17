@@ -1,0 +1,55 @@
+
+
+{% extends 'main.html'%}
+{% load static%}
+{% load crispy_forms_tags %}
+{% block content%}
+
+    <div class="container-xxl  bg-light">
+        <div class="row">
+            
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h2 class="text-center">Contact Us</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit">Submit</button>
+                </form>
+
+                <!-- <form>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">User Email:</label>
+                        <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNo">Phone No:</label>
+                        <input type="tel" class="form-control" id="phoneNo" name="phoneNo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailSubject">Email Subject:</label>
+                        <input type="text" class="form-control" id="emailSubject" name="emailSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailMessage">Email Message:</label>
+                        <textarea class="form-control" id="emailMessage" name="emailMessage" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-1"> <i class="bi bi-send"></i>Submit</button>
+                </form> -->
+            </div>
+
+            <!-- Map Container -->
+            <div class="col-md-6 d-md-block">
+               
+                    <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838.6188827343788!2d37.075802422485445!3d-1.0359560979443552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4e85f3fb4193%3A0x734419f895815141!2sNew%20Jogoo%20House%2C%20Thika!5e0!3m2!1sen!2ske!4v1693923078871!5m2!1sen!2ske" width="600" height="450" style="border:0;" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

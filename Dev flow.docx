@@ -45,3 +45,21 @@ in the application i will use google forms
 Day 4
 Create a contact model that will store username, email, phone no, email_subject, email_message
 remember to input the whatsapp chat icon
+
+DAY 5
+create form.py file for our contact form
+create a view for our form
+time to use crispy forms do the following
+>>>>>$ pip install django-crispy-forms
+>>>>>$ pip install crispy-bootstrap5
+And in settings.py
+
+INSTALLED_APPS = [
+ ...,
+'crispy_forms',
+'crispy_bootstrap5',  # Forgetting this was probably your error
+ ]
+And then at the bottom of the page of settings.py
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
