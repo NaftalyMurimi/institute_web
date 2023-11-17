@@ -12,10 +12,12 @@
             <h5 class="card-title">{{ course.course_title }}</h5>
             <p class="card-text">Requirements: {{ course.course_requirements }}</p>
             <p class="card-text muted">Duration: {{ course.course_duration }}</p>
+           
                <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseModal{{ course.pk }}">
                       learn More
                   </button>
+                  
           </div>
         </div>
        
@@ -45,9 +47,9 @@
       </div>
       
       <div class="modal-footer">
-        <button class=" btn btn-success"> Apply Now</button>
+        <a href="https://forms.gle/4sd365oYzN4iZHEX6" class="nav-link"> <i class="bi bi-pen-fill"></i> Admission</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+    </div>
     </div>
   </div>
 </div>
