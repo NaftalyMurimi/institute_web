@@ -6,6 +6,7 @@ urlpatterns = [
     # path('success/', views.success, name='success')
 
     path('contactus', contactus.as_view(), name = 'contactus'),
+    path('courses', views.courses, name = 'courses'),
     path('success/', views.success, name='success'),
     path('about', views.about, name='about'),
 ]

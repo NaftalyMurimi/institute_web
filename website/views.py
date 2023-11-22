@@ -21,6 +21,9 @@ def success(request):
 def about(request):
     return render(request, 'about.html')
 
+def courses(request):
+    return render(request, 'includes/courses.html')
+
 
 class contactus(CreateView):
     model = ContactModel
