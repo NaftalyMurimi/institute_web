@@ -4,7 +4,7 @@ from django.db import models
 # this is the courses model
 class CoursesModel(models.Model):
     course_title = models.CharField(max_length=100)
-    course_description = models.CharField(max_length=1000)
+    course_description = models.TextField(max_length=1000)
     course_img = models.ImageField(upload_to=  'static/images/')
     course_requirements = models.CharField(max_length=200)
     course_duration = models.CharField(max_length= 100)
@@ -19,7 +19,7 @@ class ContactModel(models.Model):
     user_email = models.EmailField(unique=True, blank=True)
     Phone_no =  models.CharField(max_length=100)
     email_subject =  models.CharField(max_length=100)
-    email_message =  models.CharField(max_length=1000)
+    email_message =  models.TextField(max_length=1000)
 
     def __str__(self):
         return self.email_subject
