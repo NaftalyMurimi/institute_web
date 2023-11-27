@@ -1,6 +1,18 @@
 {% load static%}
 
 <div class="container-fluid py-3" id="about">
+    <!-- WhatsApp icon
+    <a href="https://wa.me/1234567890" class="whatsapp-icon" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a> -->
+
+    <div class=" ">
+        <a href="https://wa.me/+254722600025" target="_blank">
+            <i class="bi bi-whatsapp whatsapp-icon" alt="..." data-bs-toggle="tooltip" data-bs-placement="left" title="Chat with us on WhatsApp"></i>
+        </a>
+   
+    </div>
+
     <div class="container  text-center bg-light sticky-top">
         <h1 class=" text-primary ">About Us</h1>
     </div>
@@ -48,7 +60,7 @@
 
                     <b>Dr. Geoffrey Mariga, PHD</b>
                     <br>
-                    Founder, Arise Technical Training Institute (ATTI)</p>
+                    Director, Arise Technical Training Institute (ATTI)</p>
                
             </div>
         </div>
@@ -156,3 +168,8 @@
         </div>
     </div>
     
+    <script>
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
