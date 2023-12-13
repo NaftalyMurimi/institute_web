@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from .views import contactus
+from .views import contactus, courses
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     # path('success/', views.success, name='success')

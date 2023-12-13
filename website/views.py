@@ -22,8 +22,10 @@ def about(request):
     return render(request, 'about.html')
 
 def courses(request):
-    return render(request, 'includes/courses.html')
+    return render(request, 'courses.html')
 
+    
+   # URL to redirect to after successful message submission
 
 class contactus(CreateView):
     model = ContactModel
