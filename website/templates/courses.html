@@ -1,4 +1,4 @@
-
+{% extends 'main.html'%}
 
 {% load static%}
 
@@ -8,6 +8,13 @@
 <section id="courses">
   <div class="text-center bg-light sticky-top">
     <h1 class=" text-primary py-2">Our Course</h1>
+</div>
+<!-- whatsapp Icon  -->
+<div class=" ">
+  <a href="https://wa.me/+254722600025" target="_blank">
+      <i class="bi bi-whatsapp whatsapp-icon" alt="..." data-bs-toggle="tooltip"
+       data-bs-placement="left" title="Chat with us on WhatsApp"></i>
+  </a>
 </div>
   <div class="container-xxl  mt-2">
     
@@ -64,7 +71,7 @@
 
 
 </section>
-
+{% include 'includes/footer.html'%} 
 {% endblock %}
 
 

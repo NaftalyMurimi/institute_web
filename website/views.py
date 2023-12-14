@@ -9,10 +9,10 @@ from django.views.generic.edit import CreateView
 #     # return HttpResponse('We are building this')
 #     return render(request, 'homepage.html')
 
-def homepage(request):
+def courses(request):
     courses = CoursesModel.objects.all()
     return render (request=request,
-                   template_name='homepage.html',
+                   template_name='courses.html',
                    context= {"courses": courses})
 
 def success(request):
@@ -21,8 +21,8 @@ def success(request):
 def about(request):
     return render(request, 'about.html')
 
-def courses(request):
-    return render(request, 'courses.html')
+def homepage(request):
+    return render(request, 'homepage.html')
 
     
    # URL to redirect to after successful message submission
