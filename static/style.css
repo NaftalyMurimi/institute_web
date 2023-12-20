@@ -3,7 +3,8 @@ body{
 }
 .holder{
     background-image: url('image1.PNG');
-    background-size: cover;
+    background-size:cover;
+    /* height:600px ; */
     background-repeat: no-repeat;
     opacity: 1;
     

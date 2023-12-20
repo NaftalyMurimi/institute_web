@@ -24,7 +24,26 @@
     </div>
     
   </div> -->
-  <div class="holder container-xxl">
+  
+  {% include 'caresoul.html'%} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <div class="holder container-xxl ">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-5 text-center text-md-start">
         <p>
@@ -36,17 +55,20 @@
             vibrant student life.
           We aim at producing commpetitive leaders and professionals in technology to help business 
           technology-drivenin their service delivery.</p>
-        <p class=" text-muted">Elevate your life by acquiring a new skill set with us today</p>
-        <a href="#courses" class="btn btn-primary btn-lg mb-3">Explore Our Courses</a>
-        <a href="https://forms.gle/4sd365oYzN4iZHEX6" class="btn btn-lg  btn-success  mb-3"> <i class="bi bi-pen-fill"></i> Apply Now</a>
-      </div>
+        </div>
       <div class="col-md-5 text-center d-none d-md-block">
         <img src="{% static 'Arise.png'%}" class="img-fluid">
       </div>
     </div>
-
    
-  </div>
+    <div class="text-center">
+      <p class=" text-white">Elevate your life by acquiring a new skill set with us today</p>
+      <a href="{% url 'courses'%}" class="btn btn-primary btn-lg mb-3">Explore Our Courses</a>
+      <a href="https://forms.gle/4sd365oYzN4iZHEX6" class="btn btn-lg  btn-success  mb-3"> <i class="bi bi-pen-fill"></i> Apply Now</a>
+    
+    </div>
+   
+  </div> -->
  <!-- cards courses-->
  
  {% include 'about.html'%} 

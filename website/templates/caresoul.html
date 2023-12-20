@@ -1,0 +1,107 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arise TTI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    
+</style>
+</head>
+<body>
+    
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <!-- one -->
+      <div class="holder container-xxl carousel-item active">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <p>
+              <div class="display-5 orange">Arise Technical Training Institute</div>
+              
+            </p>
+            <p class="text-white">We are modern, innovative and industry oriented institute, pursuing excellence in teaching,
+              learning, research and consultancy, community outreach, career guidance as well as providing a
+                vibrant student life.
+              We aim at producing commpetitive leaders and professionals in technology to help business 
+              technology-driven in their service delivery.</p>
+            </div>
+            <div class="col-md-5 text-center d-none d-md-block">
+              <img src="{% static 'Arise.png'%}" class="img-fluid">
+            </div>
+        </div>
+      
+        <div class="text-center">
+          <p class=" text-white">Elevate your life by acquiring a new skill set with us today</p>
+          <a href="{% url 'courses'%}" class="btn btn-primary btn-lg mb-3">Explore Our Courses</a>
+          <a href="https://forms.gle/4sd365oYzN4iZHEX6" class="btn btn-lg  btn-success  mb-3"> <i class="bi bi-pen-fill"></i> Apply Now</a>
+        
+        </div>
+      
+      </div>
+      <!-- two -->
+      <div class="holder container-xxl carousel-item">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <p>
+              <div class="display-5 orange">Arise Technical Training Institute</div>
+              
+            </p>
+            <p class="text-white">We are modern, innovative and industry oriented institute, pursuing excellence in teaching,
+              learning, research and consultancy, community outreach, career guidance as well as providing a
+                vibrant student life.
+              We aim at producing commpetitive leaders and professionals in technology to help business 
+              technology-driven in their service delivery.</p>
+            </div>
+            <div class="col-md-5 text-center d-none d-md-block">
+              <img src="{% static 'Arise.png'%}" class="img-fluid">
+            </div>
+        </div>
+      
+        <div class="text-center">
+          <p class=" text-white">Elevate your life by acquiring a new skill set with us today</p>
+          <a href="{% url 'courses'%}" class="btn btn-primary btn-lg mb-3">Explore Our Courses</a>
+          <a href="https://forms.gle/4sd365oYzN4iZHEX6" class="btn btn-lg  btn-success  mb-3"> <i class="bi bi-pen-fill"></i> Apply Now</a>
+        
+        </div>
+      
+      </div>
+      <!-- three -->
+
+      <div class=" container-xxl carousel-item">
+        {% for course in courses %}
+            <img src=" {% url 'course.course_img'%}" class="img-fluid container-xxl" style="max-height: 450px;">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <p>
+                        <div class="display-5 orange"><h5 class="card-title">{{ course.course_title }}</h5></div>
+                    </p>
+                    <p class="text-white"></p>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+
+
+  
+    
+</body>
+</html>

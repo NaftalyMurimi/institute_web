@@ -24,7 +24,13 @@ def about(request):
 def homepage(request):
     return render(request, 'homepage.html')
 
-    
+
+# carosuel slider
+def courses(request):
+    courses = CoursesModel.objects.all()
+    return render (request=request,
+                   template_name='caresoul.html',
+                   context= {"courses": courses}) 
    # URL to redirect to after successful message submission
 
 class contactus(CreateView):
